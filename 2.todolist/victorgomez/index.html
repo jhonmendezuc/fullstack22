@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Task List</title>
+</head>
+<body>
+<div id="container">
+    <div class="header-task">
+             <h1>Task List</h1>
+    </div>
+
+<div class="input-task" >       
+    <input type="text" class="task-input" id="taskInput" placeholder="Ingrese una nueva tarea" autocomplete="off" >
+    <button class="add-task" id="addBtn">+</button>
+</div>
+
+
+        <div class="list-task">
+            <ul id="taskList">
+               
+            </ul>
+           
+    </div>
+
+     <div class="task-filtres">
+                <span id="TaskCount"> 0 tasks</span>
+                <button class="all" id="all">All</button>
+                <button class="active" id="active">Active</button>
+                <button class="completed" id="completed">Completed</button>
+        </div>
+</div>
+<script src="./js/script.js"></script>
+    
+</body>
+</html>
