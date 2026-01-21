@@ -54,12 +54,12 @@ const readerTask = () => {
     //qué queremos renderizar
     const li = document.createElement("li");
     li.innerHTML = `
-        <div>
-          <input id="task-${index}" type="checkbox" ${task.status ? "checked" : ""} />
+        <div class="todo-item">
+          <input id="task-${index}" type="checkbox" ${task.status ? "checked" : ""}  data-index="${index}"/>
           <label class="task-title" for="task-${index}"
             >${task.name} | ${task.description} | ${task.date}</label
           >
-          <span class="material-symbols-outlined task-delete"> delete </span>
+          <span data-index="${index}" class="material-symbols-outlined task-delete"> delete </span>
         </div>
   `;
     //donde quiero renderizar
@@ -90,5 +90,18 @@ filterCompleteBtn.addEventListener("click", () => {
 
 filterActiveBtn.addEventListener("click", () => {
   currentFilter = "active";
+  readerTask();
+});
+
+// Marcar como completada o eliminar tarea
+taskList.addEventListener("click", (e) => {
+  if (e.target.tagName === "INPUT") {
+    const index = e.target.dataset.index;
+    tasks[index].status = !tasks[index].status;
+  } else if (e.target.tagName === "SPAN") {
+    console.log("entro");
+    const index = e.target.dataset.index;
+    tasks.splice(index, 1);
+  }
   readerTask();
 });

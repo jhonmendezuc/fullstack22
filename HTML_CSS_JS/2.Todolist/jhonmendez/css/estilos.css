@@ -157,3 +157,20 @@ body {
   font-weight: bold;
   /* grosor de la fuente*/
 }
+
+ .todo-item {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: space-between;
+   
+ }
+
+.todo-item input {
+  margin-right: 0.5rem; 
+ }
+      
+.todo-item.completed span {
+ text-decoration: line-through;
+ color: #888;
+}

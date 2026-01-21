@@ -93,3 +93,65 @@ let eliminarTarea = (nombreTarea) => {
   agregarTarea("tarea 3");
   eliminarTarea("tarea1");
 })();
+
+/*objetos literales*/
+let tareas = [];
+let responsable1 = {
+  nombre: "jhon",
+  correo: "jhon@gmail.com",
+};
+let responsable2 = {
+  nombre: "felipe",
+  correo: "felipe@gmail.com",
+};
+let tarea = {
+  titulo: "lectura",
+  descripcion: "leer libro",
+  estado: true,
+  responsables: [responsable1, responsable2],
+};
+tareas.push(tarea);
+//impresion de un objeto
+console.log(tarea);
+//impresion de un atributo
+console.log(tarea.titulo);
+console.log(tarea.responsables[1].correo);
+
+/*crear objetos funcionales*/
+function User(username, password) {
+  this.username = username;
+  this.password = password;
+  this.mostrarDatos = () => {
+    console.log(this.username, this.password);
+  };
+}
+
+let usuario1 = new User("jhonm", "213");
+console.log(usuario1.mostrarDatos);
+
+let usuario2 = new User("felipem", "789");
+
+/* crear objetos con la clase Object */
+
+let Persona = new Object();
+
+Persona.nombre = "jhon";
+Persona.apellido = "mendez";
+Persona.telefonos = [2132321, 45646];
+Persona.correos = ["jhon@gmail.com", "jhon@outloook.es"];
+Persona.ubicaciones = [
+  {
+    tipo: "casa",
+    direccion: "calle 123",
+  },
+  {
+    tipo: "oficina",
+    direccion: "calle 789",
+  },
+];
+console.log(Persona);
+
+import Factura from "./Factura.js";
+
+const factura1 = new Factura("jhon", "2026-01-20", 45000);
+console.log(factura1);
