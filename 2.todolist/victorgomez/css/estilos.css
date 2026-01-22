@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  
+}
+
+body{
+    background-color: #d5d1d1;  
+    font-family: Nunito, sans-serif;
+}
+
+#container{
+    
+    max-width: 500px;
+    background-color: #fcfafa;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-task h1{
+
+margin: 10px;
+}
+
+.input-task{
+    display: flex;
+    margin-bottom: 12px;
+
+}
+
+.input-task input{
+    flex: 1;
+    padding: 12px 5px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 1px #000;
+}
+
+.input-task button{
+    border: none;
+    margin-left: 10px;
+    box-shadow: 0 0 1px #000;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.input-task button:hover{
+    background-color: #356738;
+    opacity: 0.9;  
+}
+
+#taskList{
+    list-style: none;    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+}
+
+#taskList li{   
+    display: flex;
+    align-items: center;   
+    padding: 14px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #000;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+#taskList li:hover{
+    background-color: #dedddd;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#taskList li input{
+    margin-right: 12px;
+     
+}
+
+.task.completed span{
+    text-decoration: line-through;
+    color: gray;
+}
+
+#taskCount{
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.delete-btn{
+    cursor: pointer;
+    border: none;
+    background: none;
+    
+    
+}
+
+.delete-btn:hover{
+    opacity: 0.9;
+      
+}
+
+
+
+
+.delete-btn img{
+    width: 20px;
+    
+   
+}
+
+.task-filtres{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    
+}
+
+.task-filtres button{
+   
+    border: none;    
+    background: none;  
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.task-filtres button.all:hover{
+    color: blue;
+}
+
+.task-filtres button.active:hover{
+    color: orange;
+}
+
+.task-filtres button.completed:hover{
+    color: green;
+}
